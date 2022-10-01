@@ -1,26 +1,27 @@
 import styled from 'styled-components';
 import React from 'react'
-import img from '../img/img.jpg'
 function Ads() {
+
+
+  
   return (
     <AdsContainer>
-      <img src={img} alt="" />
+     <img src="https://i.pinimg.com/originals/06/9d/61/069d617dca720be2d65014963515d28e.gif" alt="" />
     </AdsContainer>
   )
 }
 
 const AdsContainer = styled.div`
-    width:100%;
-    height:30%;
-    background-color:pink;
-    margin-bottom:2rem;
-    border:2px solid black;
-
+    display:flex;
+    border-radius:2rem; 
+    border:1px solid black;
+    box-sizing:border-box;
+    justify-content:center;
+    
     img {
-        width:400px;
-        height:300px;
-        object-fit:cover;
+      border-radius:2rem;
     }
+
 `
 
 

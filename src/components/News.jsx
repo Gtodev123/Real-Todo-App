@@ -9,14 +9,14 @@ const [news , setNews] = useState([]);
   },[])
 
   const getNews = async () => {
-    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&apiKey=27f0af2bfe844bd796a0856bc4486e85`)
+    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&apiKey=27f0af2bfe844bd796a0856bc4486e85&pageSize=20`)
     const data = await api.json();
     setNews(data.articles)
     console.log(data.articles)
   }
   
   return (
-
+<StyledNewsContainer>
     <Wrapper>
             {news.map((article) => {
               return(
@@ -28,18 +28,24 @@ const [news , setNews] = useState([]);
               )
             })}
     </Wrapper>
+    </StyledNewsContainer>
   )
 }
  
+const StyledNewsContainer = styled.div`
+  grid-row-start:2;
+  grid-row-end:span 2;
+  grid-column-start:2;
+  grid-column-end:4;
+  box-sizing:content-box;
+`
 
 const Wrapper = styled.div`
-padding-left:3rem;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 grid-column-gap:2rem;
 grid-row-gap:2rem;
-width:90%;
-`;
+`
 
 
 const Card = styled.div`

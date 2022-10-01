@@ -9,9 +9,7 @@ function ChatBox() {
 
 
 const ChatContainer = styled.div`
-    box-sizing: content-box;
-    height:100%;
-    width: 100%;
+border-radius:2rem;
     background-color:blue;
     border:2px solid black;
 `

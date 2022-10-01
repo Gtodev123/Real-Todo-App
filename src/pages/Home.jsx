@@ -1,22 +1,10 @@
-import styled from "styled-components"
-import News from "../components/News"
-import GoogleAds from "../components/GoogleAds"
+import React from 'react'
+import News from '../components/News'
 
 function Home() {
   return (
-    <GridContainer>
-        <GoogleAds />
-        <News />
-    </GridContainer>
+    <News />
   )
 }
-
-
-const GridContainer = styled.div`
-  display: grid;
-  width: 100%;
-  grid-template-columns: 30% 1fr;
-`
-
 
 export default Home
