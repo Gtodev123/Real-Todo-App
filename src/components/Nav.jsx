@@ -25,11 +25,12 @@ function Nav() {
 
 
 const NavBar = styled.div`
-  border: 1px solid black;
    grid-column-start:1 ;
    grid-column-end:4;
-   background-color:#e2e2e228;
-   border-radius:1rem;
+   border-radius: 41px;
+background: #e0e0e0;
+box-shadow:  -8px 8px 16px #b5b5b5,
+             8px -8px 16px #ffffff;
 `
 const NavContainer = styled.div`
     display:flex;

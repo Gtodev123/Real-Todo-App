@@ -9,8 +9,9 @@ function ChatBox() {
 
 
 const ChatContainer = styled.div`
-border-radius:2rem;
-    background-color:blue;
-    border:2px solid black;
+border-radius: 41px;
+background: #e0e0e0;
+box-shadow:  -8px -8px 16px #b5b5b5,
+             8px 8px 16px #ffffff;
 `
 export default ChatBox

@@ -13,10 +13,12 @@ function Ads() {
 
 const AdsContainer = styled.div`
     display:flex;
-    border-radius:2rem; 
-    border:1px solid black;
     box-sizing:border-box;
     justify-content:center;
+    border-radius: 41px;
+background: #e0e0e0;
+box-shadow:  11px 11px 22px #b5b5b5,
+             -11px -11px 22px #ffffff;
     
     img {
       border-radius:2rem;

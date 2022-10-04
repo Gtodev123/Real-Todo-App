@@ -30,7 +30,10 @@ import Footer from './components/Footer';
 }
 
 const StyledContainer = styled.div`
-  background-image:url('https://img.freepik.com/free-vector/low-poly-white-background-design_1017-33204.jpg?w=2000');
+ 
+background: #e0e0e0;
+box-shadow:  -8px -8px 16px #b5b5b5,
+             8px 8px 16px #ffffff;
   padding:10px;
   width:100%;
   height:100%;
@@ -38,7 +41,7 @@ const StyledContainer = styled.div`
 
 
   grid-template-columns: repeat(3 , 1fr);
-  grid-template-rows: 5rem 1fr 1fr 10rem;
+  grid-template-rows: 5rem 400px 1fr 10rem;
 
   gap: 20px;
   box-sizing:border-box;
