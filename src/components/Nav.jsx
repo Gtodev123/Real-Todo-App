@@ -15,7 +15,13 @@ function Nav() {
         <Link to='/health'><a>Здраве</a></Link>
       </li>
       <li>
-        <Link to='/health'><a>Здраве</a></Link>
+        <Link to='/business'><a>Бизнес</a></Link>
+      </li>
+      <li>
+        <Link to='/science'><a>Наука</a></Link>
+      </li>
+      <li>
+        <Link to='/technology'><a>Технологий</a></Link>
       </li>
       </NavMenu>
     </NavContainer>

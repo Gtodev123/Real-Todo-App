@@ -1,6 +1,7 @@
 
 import Nav from './components/Nav';
 import Sport from './pages/Sport';
+import Health from './pages/Health';
 import {Routes , Route} from 'react-router-dom'
 import './App.css'
 import styled from 'styled-components';
@@ -8,6 +9,9 @@ import Home from './pages/Home';
 import Ads from './components/Ads'
 import ChatBox from './components/ChatBox'
 import Footer from './components/Footer';
+import Science from './pages/Science';
+import Technologies from './pages/Technologies';
+import Business from './pages/Business';
  function App() {
   
   return (
@@ -19,6 +23,10 @@ import Footer from './components/Footer';
       <Routes>
       <Route path='/' exact element={<Home />} />
       <Route path='/sport' exact element={<Sport />} />
+      <Route path='/health' exact element={<Health />} />
+      <Route path='/business' exact element={<Business />} />
+      <Route path='/science' exact element={<Science />} />
+      <Route path='/technology' exact element={<Technologies />} />
       </Routes>
       <Footer />
      

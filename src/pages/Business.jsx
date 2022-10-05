@@ -1,7 +1,7 @@
 import { useEffect , useState} from "react";
 import styled from "styled-components";
 
-const  News = () => {
+const  Business = () => {
 
 const [news , setNews] = useState([]);
   useEffect(() => {
@@ -9,7 +9,7 @@ const [news , setNews] = useState([]);
   },[])
 
   const getNews = async () => {
-    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&apiKey=27f0af2bfe844bd796a0856bc4486e85`)
+    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&category=business&apiKey=27f0af2bfe844bd796a0856bc4486e85`)
     const data = await api.json();
     setNews(data.articles)
     console.log(data.articles)
@@ -17,7 +17,7 @@ const [news , setNews] = useState([]);
   
   return (
 <StyledNewsContainer>
-  <h1>Водещите новини</h1>
+  <h1>Бизнес новини</h1>
   
     <Wrapper>
             {news.map((article) => {
@@ -68,4 +68,4 @@ h4 {
  font-weight:bold; 
 }
 `;
-export default News
+export default Business
