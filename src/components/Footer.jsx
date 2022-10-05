@@ -7,27 +7,27 @@ function Footer() {
     <StyledFooter>
         <section class="footer">
       <div class="social">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-snapchat"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="/"><i class="fab fa-instagram"></i></a>
+        <a href="/"><i class="fab fa-snapchat"></i></a>
+        <a href="/"><i class="fab fa-twitter"></i></a>
+        <a href="/"><i class="fab fa-facebook-f"></i></a>
       </div>
 
       <ul class="list">
         <li>
-          <a href="#">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#">Services</a>
+          <a href="/">Services</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="/">About</a>
         </li>
         <li>
-          <a href="#">Terms</a>
+          <a href="/">Terms</a>
         </li>
         <li>
-          <a href="#">Privacy Policy</a>
+          <a href="/">Privacy Policy</a>
         </li>
       </ul>
       <p class="copyright">Georgi Todev @ 2022</p>

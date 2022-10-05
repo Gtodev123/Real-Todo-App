@@ -9,20 +9,20 @@ function Nav() {
       <h1><Link to='/'>All News</Link></h1>
     <NavMenu>
       <li>
-        <Link to='/sport'><a>Спорт</a></Link>
+        <Link to='/sport'><a href='/sport'>Спорт</a></Link>
       </li>
       <li>
-        <Link to='/health'><a>Здраве</a></Link>
+        <Link to='/health'><a href='/health'>Здраве</a></Link>
       </li>
       <li>
-        <Link to='/business'><a>Бизнес</a></Link>
+        <Link to='/business'><a href='/business'>Бизнес</a></Link>
       </li>
       <li>
-        <Link to='/science'><a>Наука</a></Link>
+        <Link to='/science'><a href='/science'>Наука</a></Link>
       </li>
       <li>
-        <Link to='/technology'><a>Технологий</a></Link>
-      </li>
+        <Link to='/technology'><a href='/technology'>Технологий</a></Link>
+      </li> 
       </NavMenu>
     </NavContainer>
     </NavBar>
