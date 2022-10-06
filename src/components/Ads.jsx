@@ -23,7 +23,9 @@ box-shadow:  11px 11px 22px #b5b5b5,
     img {
       border-radius:2rem;
     }
-
+    @media screen and (max-width: 600px) {
+      display:none;
+}
 `
 
 

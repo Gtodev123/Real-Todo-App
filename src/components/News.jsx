@@ -9,10 +9,10 @@ const [news , setNews] = useState([]);
   },[])
 
   const getNews = async () => {
-    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&apiKey=27f0af2bfe844bd796a0856bc4486e85`)
+    const api = await fetch(`http://api.mediastack.com/v1/news?access_key=2e9023272e043dbad31491af4cd407d4&countries=bg`)
     const data = await api.json();
-    setNews(data.articles)
-    console.log(data.articles)
+    setNews(data.data)
+    console.log(data);
   }
   
   return (
@@ -23,9 +23,10 @@ const [news , setNews] = useState([]);
             {news.map((article) => {
               return(
                 <Card>
-                  <h4>{article.title}</h4>
-                  <span>{article.publishedAt}</span>
-                  <img src={article.urlToImage} alt={article.title} />
+                  <h1>{article?.title.substring(0, 80)}</h1>
+                  <span>{article.published_at}</span>
+                  <img src={article.image} alt={article.title} />
+                  <button>Прочети повече</button>
                 </Card>
               )
             })}
@@ -33,7 +34,7 @@ const [news , setNews] = useState([]);
     </StyledNewsContainer>
   )
 }
- 
+
 const StyledNewsContainer = styled.div`
   grid-row-start:2;
   grid-row-end:span 2;
@@ -44,15 +45,20 @@ const StyledNewsContainer = styled.div`
 
 const Wrapper = styled.div`
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(12rem,16fr));
 grid-column-gap:2rem;
 grid-row-gap:2rem;
 background:#e0e0e0;
+justify-content:center;
 
 `
 
 
 const Card = styled.div`
+display:flex;
+flex-direction:column;
+cursor: pointer;
+overflow:hidden;
 transition:transform .2s;
 &:hover {
   transform: scale(1.1);
@@ -61,11 +67,22 @@ border-radius: 2px;
 background: #e0e0e0;
 box-shadow:  11px 11px 22px #b5b5b5,
              -11px -11px 22px #ffffff;
+
 img {
- width:100%;
-};
-h4 {
- font-weight:bold; 
+  height:12rem;
+  width:100%;
+  object-fit:cover;
+
+}
+span {
+  font-size:0.8rem;
+}
+h1 {
+  font-size: 1rem;
+  padding:0.5rem;
+}
+button {
+  width:100%;
 }
 `;
 export default News
