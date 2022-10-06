@@ -9,10 +9,10 @@ const [news , setNews] = useState([]);
   },[])
 
   const getNews = async () => {
-    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&category=health&apiKey=27f0af2bfe844bd796a0856bc4486e85`)
+    const api = await fetch(`http://api.mediastack.com/v1/news?access_key=2e9023272e043dbad31491af4cd407d4&countries=bg&categories=health`)
     const data = await api.json();
-    setNews(data.articles)
-    console.log(data.articles)
+    setNews(data.data)
+    console.log(data);
   }
   
   return (
@@ -23,9 +23,10 @@ const [news , setNews] = useState([]);
             {news.map((article) => {
               return(
                 <Card>
-                  <h4>{article.title}</h4>
-                  <span>{article.publishedAt}</span>
-                  <img src={article.urlToImage} alt={article.title} />
+                  <h1>{article?.title.substring(0, 80)}</h1>
+                  <span>{article.published_at}</span>
+                  <img src={article.image} alt={article.title} />
+                  <button>Прочети повече</button>
                 </Card>
               )
             })}

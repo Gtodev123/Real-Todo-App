@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
-
+import { GiNewspaper } from 'react-icons/gi';
 function Nav() {
   return (
     <NavBar>
       <NavContainer>
-      <h1><Link to='/'>All News</Link></h1>
+      <h1><Link to='/'><GiNewspaper /></Link></h1>
     <NavMenu>
       <li>
         <Link to='/sport'><a href='/sport'>Спорт</a></Link>
@@ -20,9 +20,6 @@ function Nav() {
       <li>
         <Link to='/science'><a href='/science'>Наука</a></Link>
       </li>
-      <li>
-        <Link to='/technology'><a href='/technology'>Технологий</a></Link>
-      </li> 
       </NavMenu>
     </NavContainer>
     </NavBar>
@@ -31,12 +28,16 @@ function Nav() {
 
 
 const NavBar = styled.div`
+  height:100%;
    grid-column-start:1 ;
    grid-column-end:4;
-   border-radius: 41px;
+   border-radius: 30px;
 background: #e0e0e0;
 box-shadow:  -8px 8px 16px #b5b5b5,
              8px -8px 16px #ffffff;
+             @media screen and (max-width: 600px) {
+              max-width:500px;
+}
 `
 const NavContainer = styled.div`
     display:flex;

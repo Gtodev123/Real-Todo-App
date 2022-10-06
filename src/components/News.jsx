@@ -41,6 +41,13 @@ const StyledNewsContainer = styled.div`
   grid-column-start:2;
   grid-column-end:4;
   box-sizing:content-box;
+  @media screen and (max-width: 600px) {
+    grid-row-start:2;
+  grid-row-end:span 2;
+  grid-column-start:1;
+  grid-column-end:4;
+  box-sizing:content-box;
+  }
 `
 
 const Wrapper = styled.div`

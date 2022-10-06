@@ -49,11 +49,11 @@ box-shadow:  -8px -8px 16px #b5b5b5,
 
 
   grid-template-columns: repeat(3 , 1fr);
-  grid-template-rows: 5rem 400px 1fr 10rem;
+  grid-template-rows: 6rem 400px 1fr 15rem;
 
   gap: 20px;
   box-sizing:border-box;
-
+  
 `
 
 export default App;
