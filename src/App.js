@@ -53,6 +53,11 @@ box-shadow:  -8px -8px 16px #b5b5b5,
 
   gap: 20px;
   box-sizing:border-box;
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(3 , 1fr);
+  grid-template-rows: 4rem 400px 1fr 15rem;
+}
   
 `
 

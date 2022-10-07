@@ -1,9 +1,17 @@
 import styled from 'styled-components'
 import React from 'react'
+import { Embed} from 'hyvor-talk-react'
 
 function ChatBox() {
   return (
-    <ChatContainer>ChatBox</ChatContainer>
+    <ChatContainer> <div>
+    
+    { /* Load Comments now */ }
+    <Embed 
+      websiteId={7932}
+      id={7932}
+    />
+  </div></ChatContainer>
   )
 }
 

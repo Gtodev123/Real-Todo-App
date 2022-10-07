@@ -11,6 +11,7 @@
     "bootstrap": "^5.2.2",
     "dotenv": "^16.0.2",
     "framer-motion": "^7.3.5",
+    "hyvor-talk-react": "^2.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",

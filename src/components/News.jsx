@@ -86,7 +86,10 @@ span {
 }
 h1 {
   font-size: 1rem;
-  padding:0.5rem;
+  padding:0.5rem; 
+  @media screen and (max-width: 600px) {
+        font-size:80%;
+    }
 }
 button {
   width:100%;
