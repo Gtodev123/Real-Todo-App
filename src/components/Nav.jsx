@@ -16,12 +16,12 @@ function Nav() {
     <NavBar>
       <NavContainer>
       <Link to='/'><img  src={logo} alt="logoq" /></Link>
-      <HamburgerButton onClick={HamburgerStatus} isActive={isActive}>
+      <HamburgerButton onClick={HamburgerStatus}>
         <span href='#'></span>
         <span href='#'></span>
         <span href='#'></span>
       </HamburgerButton>
-    <NavMenu>
+    <NavMenu isActive={isActive}>
       <li>
         <Link to='/sport'><a href='/sport'>Спорт</a></Link>
       </li>
@@ -106,14 +106,13 @@ const NavContainer = styled.div`
     
 `
 const NavMenu = styled.div`
-
   display:flex;
-  li {
-    padding:1rem;
-    list-style-type:none;
-    transition:transform .2s;
-    @media screen and (max-width: 600px) {
-      display:flex;
+li {
+  padding:1rem;
+  list-style-type:none;
+  transition:transform .2s;
+  @media screen and (max-width: 600px) {
+      display: ${props => props.isActive ? 'flex' : 'none'};
       padding:0;
       margin:0;
 }
