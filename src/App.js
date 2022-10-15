@@ -17,10 +17,11 @@ import Business from './pages/Business';
   return (
     
     <StyledContainer className="App">
+      
+      <Routes>
       <Nav />
       <Ads />
       <ChatBox />
-      <Routes>
       <Route path='/' exact element={<Home />} />
       <Route path='/sport' exact element={<Sport />} />
       <Route path='/health' exact element={<Health />} />
