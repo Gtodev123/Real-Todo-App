@@ -63,8 +63,9 @@ const HamburgerButton = styled.a`
 `
 
 const NavBar = styled.div`
+width:100%;
   height:100%;
-   grid-column-start:1 ;
+   grid-column-start:1;
    grid-column-end:4;
    border-radius: 30px;
   background: #e0e0e0;

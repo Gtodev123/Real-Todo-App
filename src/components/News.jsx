@@ -9,10 +9,10 @@ const [news , setNews] = useState([]);
   },[])
 
   const getNews = async () => {
-    const api = await fetch(`http://api.mediastack.com/v1/news?access_key=2e9023272e043dbad31491af4cd407d4&countries=bg`)
+    const api = await fetch(`https://newsapi.org/v2/top-headlines?country=bg&category=technology&apiKey=27f0af2bfe844bd796a0856bc4486e85`)
     const data = await api.json();
-    setNews(data.data)
-    console.log(data);
+    setNews(data.articles)
+    console.log(data.articles)
   }
   
   return (
@@ -25,7 +25,7 @@ const [news , setNews] = useState([]);
                 <Card>
                   <h1>{article?.title.substring(0, 80)}</h1>
                   <span>{article.published_at}</span>
-                  <img src={article.image} alt={article.title} />
+                  <img src={article.urlToImage} alt={article.title} />
                   <button>Прочети повече</button>
                 </Card>
               )

@@ -1,65 +1,21 @@
 
-import Nav from './components/Nav';
-import Sport from './pages/Sport';
-import Health from './pages/Health';
-import {Routes , Route} from 'react-router-dom'
+import { Routes , Route } from 'react-router-dom';
 import './App.css'
-import styled from 'styled-components';
-import Home from './pages/Home';
-import Ads from './components/Ads'
-import ChatBox from './components/ChatBox'
-import Footer from './components/Footer';
-import Science from './pages/Science';
-import Technologies from './pages/Technologies';
-import Business from './pages/Business';
+import Login from './components/Login';
+import Mainpage from './components/Mainpage';
  function App() {
   
   return (
-    
-    <StyledContainer className="App">
-      
+    <div>
       <Routes>
-      <Nav />
-      <Ads />
-      <ChatBox />
-      <Route path='/' exact element={<Home />} />
-      <Route path='/sport' exact element={<Sport />} />
-      <Route path='/health' exact element={<Health />} />
-      <Route path='/business' exact element={<Business />} />
-      <Route path='/science' exact element={<Science />} />
-      <Route path='/technology' exact element={<Technologies />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/mainpage//*" element={<Mainpage />} />
       </Routes>
-      <Footer />
-     
 
-    </StyledContainer>
-      
-
+      </div>
   );
 }
 
-const StyledContainer = styled.div`
- 
-background: #e0e0e0;
-box-shadow:  -8px -8px 16px #b5b5b5,
-             8px 8px 16px #ffffff;
-  padding:10px;
-  width:100%;
-  height:100%;
-  display:grid;
 
-
-  grid-template-columns: repeat(3 , 1fr);
-  grid-template-rows: 6rem 400px 1fr 15rem;
-
-  gap: 20px;
-  box-sizing:border-box;
-
-  @media screen and (max-width: 600px) {
-    grid-template-columns: repeat(3 , 1fr);
-  grid-template-rows: 4rem 400px 1fr 15rem;
-}
-  
-`
 
 export default App;

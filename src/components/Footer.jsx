@@ -5,15 +5,15 @@ import './Footer.css'
 function Footer() {
   return (
     <StyledFooter>
-        <section class="footer">
-      <div class="social">
-        <a href="/"><i class="fab fa-instagram"></i></a>
-        <a href="/"><i class="fab fa-snapchat"></i></a>
-        <a href="/"><i class="fab fa-twitter"></i></a>
-        <a href="/"><i class="fab fa-facebook-f"></i></a>
+        <section className="footer">
+      <div className="social">
+        <a href="/"><i className="fab fa-instagram"></i></a>
+        <a href="/"><i className="fab fa-snapchat"></i></a>
+        <a href="/"><i className="fab fa-twitter"></i></a>
+        <a href="/"><i className="fab fa-facebook-f"></i></a>
       </div>
 
-      <ul class="list">
+      <ul className="list">
         <li>
           <a href="/">Home</a>
         </li>
@@ -30,7 +30,7 @@ function Footer() {
           <a href="/">Privacy Policy</a>
         </li>
       </ul>
-      <p class="copyright">Georgi Todev @ 2022</p>
+      <p className="copyright">Georgi Todev @ 2022</p>
     </section>
     </StyledFooter>
   )
