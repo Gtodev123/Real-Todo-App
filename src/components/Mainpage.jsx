@@ -3,7 +3,6 @@ import Sport from '../pages/Sport';
 import Health from '../pages/Health';
 import {Routes , Route} from 'react-router-dom'
 import Ads from './Ads';
-import ChatBox from './ChatBox';
 import Footer from './Footer';
 import Home from '../pages/Home';
 import Business from '../pages/Business';
@@ -18,7 +17,6 @@ function Mainpage() {
     <StyledContainer>
       <Nav />
       <Ads />
-      <ChatBox />
       <Routes>
       <Route path='/' exact element={<Home/>} />
       <Route path='/sport' exact element={<Sport/>} />
