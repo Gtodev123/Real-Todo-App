@@ -9,7 +9,7 @@ import Mainpage from './components/Mainpage';
     <div>
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/mainpage//*" element={<Mainpage />} />
+        <Route path="/mainpage" element={<Mainpage />} />
       </Routes>
 
       </div>
